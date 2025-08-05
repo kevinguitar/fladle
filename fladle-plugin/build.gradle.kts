@@ -1,7 +1,7 @@
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 group = "com.osacky.flank.gradle"
-version = "0.18.1-SNAPSHOT"
+version = "0.18.0-bl"
 description = "Easily Scale your Android Instrumentation Tests with Firebase Test Lab with Flank"
 
 repositories {
@@ -63,6 +63,15 @@ val sonatypeUsername : String? by project
 val sonatypePassword : String? by project
 
 publishing {
+  configure<PublishingExtension> {
+    repositories {
+      maven {
+        name = "fladle"
+        url = uri("https://artifactory.bandlab.io/artifactory/libs-release-local")
+        credentials(PasswordCredentials::class)
+      }
+    }
+  }
   repositories {
     repositories {
       maven {

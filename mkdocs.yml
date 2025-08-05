@@ -4,7 +4,7 @@
 
 extra:
   fladle:
-    current_release: '0.18.0'
+    current_release: '0.18.0-bl'
     next_release: '0.18.1'
     flank_version: '23.10.1'
 
